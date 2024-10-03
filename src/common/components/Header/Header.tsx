@@ -1,6 +1,10 @@
-export function Header(){
+import style from './header.module.css';
+import { Navigation } from "../Navigation/Navigation";
 
-    return <header>
-        Header
-    </header>
+export function Header(){
+    // return <header className={style.header}>
+      return  <header className={style.header}>
+            <Navigation />
+        </header>
+    {/* </header> */}
 }
