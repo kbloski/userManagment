@@ -14,13 +14,13 @@ export const userList = [
         password: 'manager'
     },
     {
-        id: 2,
+        id: 3,
         role: UserRoles.SUPPORT,
-        username: 'client',
-        password: 'client'
+        username: 'support',
+        password: 'support'
     },
     {
-        id: 2,
+        id: 4,
         role: UserRoles.USER,
         username: 'client',
         password: 'client'

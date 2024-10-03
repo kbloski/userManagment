@@ -2,5 +2,7 @@
     width: 100%;
     background-color: var(--background);
     color: black;
+    margin: 0;
+    padding: 10px;
 }
 

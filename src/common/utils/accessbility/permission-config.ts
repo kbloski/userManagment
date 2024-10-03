@@ -48,10 +48,10 @@ function addRoleParrents(
     target.allowsResources = Array.from( new Set(target.allowsResources.concat(source.allowsResources)) );
 }
 
-addRoleParrents( UserRoles.ADMIN, UserRoles.MANAGER);
-addRoleParrents( UserRoles.MANAGER, UserRoles.SUPPORT);
-addRoleParrents( UserRoles.SUPPORT, UserRoles.USER);
 addRoleParrents( UserRoles.USER, UserRoles.GUEST);
+addRoleParrents( UserRoles.SUPPORT, UserRoles.USER);
+addRoleParrents( UserRoles.MANAGER, UserRoles.SUPPORT);
+addRoleParrents( UserRoles.ADMIN, UserRoles.MANAGER);
 
 export {
     accessPermission

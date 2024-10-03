@@ -1,6 +1,27 @@
 .header {
+    background-color: #f0f0f06c;
+    border-radius: 10px 10px 0 0;
+    backdrop-filter: blur(8px);
     width: 100%;
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
-    background-color: #f0f0f0a2;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::after {
+    background: rgba(255, 255, 255, 0.356);
+    content: '';
+    position: absolute;
+    top:0;
+    left: -100px;
+    height: 100%;
+    width: 20px;
+    transform: skewX(-30deg);
+    transition: left 0.8s linear;
+    z-index: -1;
+}
+
+.header:hover::after {
+    left: 110%;
 }
