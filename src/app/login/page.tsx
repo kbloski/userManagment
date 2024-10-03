@@ -3,6 +3,7 @@ import { UserType } from '@/common/types/UserType';
 import style from './login.module.css';
 import { ChangeEvent, useState } from "react";
 import { error } from 'console';
+import { USER_KEY_LOCALSTORAGE } from '@/common/config';
 
 
 export default function LoginPage() {
@@ -39,7 +40,9 @@ export default function LoginPage() {
         )
         .then( data => {
             setMessage(undefined);
-            console.log( data)
+            const dataJson = JSON.stringify(data.user)
+            localStorage.setItem( USER_KEY_LOCALSTORAGE, dataJson)
+
         })
         .catch( err => { 
             if (err.message == '404') setMessage('Ten użtkownik nie istnieje');
