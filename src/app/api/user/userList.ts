@@ -15,7 +15,7 @@ export const userList = [
     },
     {
         id: 2,
-        role: UserRoles.SUPORT,
+        role: UserRoles.SUPPORT,
         username: 'client',
         password: 'client'
     },

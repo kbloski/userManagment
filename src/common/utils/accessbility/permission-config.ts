@@ -14,17 +14,17 @@ const accessPermission : accessPermissionType[] = [
     },
     {
         role: UserRoles.MANAGER,
-        priority: 1,
+        priority: 2,
         allowsResources: []
     },
     {
         role: UserRoles.SUPPORT,
-        priority: 1,
+        priority: 3,
         allowsResources: []
     },
     {
         role: UserRoles.USER,
-        priority: 1,
+        priority: 4,
         allowsResources: ['/dashboard']
     },
     {
