@@ -7,7 +7,7 @@ export function isResourceAllowedForRole(
     resource: string,
 ){
     if (typeof window === 'undefined') return;
-    
+
     let userJson = undefined;
     try {
         userJson =  localStorage.getItem(USER_KEY_LOCALSTORAGE)

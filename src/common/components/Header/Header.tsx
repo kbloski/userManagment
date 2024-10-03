@@ -1,3 +1,4 @@
+'use client'
 import style from './header.module.css';
 import { Navigation } from "../Navigation/Navigation";
 
