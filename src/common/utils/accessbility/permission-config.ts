@@ -13,6 +13,21 @@ const accessPermission : accessPermissionType[] = [
         allowsResources: ['*']
     },
     {
+        role: UserRoles.MANAGER,
+        priority: 1,
+        allowsResources: []
+    },
+    {
+        role: UserRoles.SUPPORT,
+        priority: 1,
+        allowsResources: []
+    },
+    {
+        role: UserRoles.USER,
+        priority: 1,
+        allowsResources: ['/dashboard']
+    },
+    {
         role: UserRoles.GUEST,
         priority: 100,
         allowsResources: [
@@ -26,8 +41,17 @@ function addRoleParrents(
     targetRole: UserRoles,
     sourceRole: UserRoles
 ){
+    const target = accessPermission.find( role => targetRole === role.role );
+    const source = accessPermission.find( role => sourceRole === role.role );
+    if (!target || !source) throw new Error('Add Role Parrent Permission Error in permission-config.ts');
 
+    target.allowsResources = Array.from( new Set(target.allowsResources.concat(source.allowsResources)) );
 }
+
+addRoleParrents( UserRoles.ADMIN, UserRoles.MANAGER);
+addRoleParrents( UserRoles.MANAGER, UserRoles.SUPPORT);
+addRoleParrents( UserRoles.SUPPORT, UserRoles.USER);
+addRoleParrents( UserRoles.USER, UserRoles.GUEST);
 
 export {
     accessPermission

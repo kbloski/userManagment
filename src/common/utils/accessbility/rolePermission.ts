@@ -6,7 +6,13 @@ import { UserRoles, UserType } from "@/common/types/UserType";
 export function isResourceAllowedForRole(
     resource: string,
 ){
-    const userJson =  localStorage.getItem(USER_KEY_LOCALSTORAGE)
+    if (typeof window === 'undefined') return;
+    
+    let userJson = undefined;
+    try {
+        userJson =  localStorage.getItem(USER_KEY_LOCALSTORAGE)
+    } catch(err){}
+
     let user : UserType | undefined = undefined;
     if (userJson) user = JSON.parse(userJson);
     
@@ -17,12 +23,18 @@ export function isResourceAllowedForRole(
         (access: { role: UserRoles; }) => access.role === userRole 
     )
 
-    if (!access) return window.location.href = '/';
+    if (!access) {
+        window.location.href = '/';
+        return false;
+    }
+
     for(const allowResource of access?.allowsResources){
         if( 
             allowResource === resource ||
             allowResource === '*'
         ) return true;
     }
-    return window.location.href = '/'
+    
+    window.location.href = '/'
+    return false;
 }
