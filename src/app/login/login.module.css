@@ -12,6 +12,16 @@
     overflow: hidden;
 }
 
+.callback {
+    width: 100%;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    font-size: 16px;
+    background-color: rgba(187, 255, 0, 0.521);
+    border: solid 2px rgba(187, 255, 0, 0.521);
+    border-radius: 5px;
+    color: black;
+}
 
 .form {
     border-radius: 15px;
@@ -160,7 +170,7 @@
     top: 0px;
     width: 150px;
     aspect-ratio: 1/1;
-    animation: move1 5s infinite;
+    animation: move1 8s infinite;
     transform: translateY(-110%);
 }
 
@@ -169,7 +179,7 @@
     top: -200px;
     width: 256px;
     aspect-ratio: 1/1;
-    animation: move1 5s infinite;
+    animation: move1 10s infinite;
     transform: translateY(-110%);
 }
 
