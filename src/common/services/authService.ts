@@ -5,10 +5,3 @@ export function logOut(){
     
     localStorage.setItem(USER_KEY_LOCALSTORAGE, '')
 }
-
-export function isLoggedIn(){
-    if (typeof window === 'undefined') return false;
-
-    const user = localStorage.getItem(USER_KEY_LOCALSTORAGE);
-    return Boolean(user);
-}

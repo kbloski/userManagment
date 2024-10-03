@@ -1,21 +1,19 @@
-'use client'
-import { isLoggedIn, logOut } from '@/common/services/authService';
+import {  logOut } from '@/common/services/authService';
 import style from './navigation.module.css'
 import Link from "next/link";
 import { useEffect, useState } from 'react';
-import { useRefresh } from '@/common/hooks/refreshComponent';
+import { useLogged } from '@/common/hooks/useLogged';
 
 export function Navigation() {
-    const refreshComponent = useRefresh();
-    const [isLogged, setLogged] = useState(false);
+    const logged = useLogged();
+    const [isLogged, setIsLogged] = useState(false);
 
     useEffect(() => {
-        setLogged(isLoggedIn());
-    }, [refreshComponent.switchValue]);
-
+        setIsLogged( logged.isLoggedIn )
+    }, [logged.isLoggedIn]);
+    
     function onLogOut(){
         logOut();
-        refreshComponent.refresh();
     }
 
     return (
