@@ -42,7 +42,7 @@ export default function LoginPage() {
             setMessage(undefined);
             const dataJson = JSON.stringify(data.user)
             localStorage.setItem( USER_KEY_LOCALSTORAGE, dataJson)
-
+            window.location.href = '/dashboard'
         })
         .catch( err => { 
             if (err.message == '404') setMessage('Ten użtkownik nie istnieje');

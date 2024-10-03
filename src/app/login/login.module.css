@@ -161,8 +161,8 @@
     position: absolute;
     aspect-ratio: 1/1;
     width: 15%;
-    border: solid 3px rgb(123,255,0);
-    background:radial-gradient( rgb(0,0,0,0) 60%, rgb(123,255,0))
+    border: solid 3px var(--color-contrast);
+    background:radial-gradient( rgb(0,0,0,0) 60%, var(--color-contrast))
 }
 
 .bg-rect:nth-child(1){

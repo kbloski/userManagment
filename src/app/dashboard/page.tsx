@@ -1,7 +1,9 @@
+import style from './dashboard.module.css';
+
 export default function DashboardPage(){
     return (
-        <div>
-            Dashboard
+        <div className={style.container}>
+            Zawartośc dashboard
         </div>
     )
 }

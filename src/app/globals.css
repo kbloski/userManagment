@@ -1,6 +1,7 @@
 :root {
     /* --color-dark: #800020;
-    --color-light: rgb(247, 186, 33); */
+    --color-light: rgb(247, 186, 33); 
+    --color-contrast: red; */
     --color-dark: black;
     --color-light: green;
     --color-contrast: rgb(123, 255, 0);
@@ -8,10 +9,12 @@
 }
 
 body {
-    width: 100vw;
-    min-height: 100vh;
     background: linear-gradient(to right top, var(--color-dark), var(--color-light));
+    margin: 0;
+    min-height: 100vh;
     overflow-x: hidden;
+    padding: 0;
+    width: 100vw;
 }
 
 * {
