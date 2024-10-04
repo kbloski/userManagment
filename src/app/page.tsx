@@ -18,6 +18,9 @@ export default function Home() {
         <p>
         Strona umożliwia zarządzanie użytkownikami w oparciu o przypisane im role. Użytkownicy mający określone uprawnienia mogą korzystać z pełnej funkcjonalności serwisu, natomiast użytkownicy o niższych rolach są ograniczeni w dostępie do niektórych treści. W przypadku, gdy użytkownik próbuje odwiedzić adres URL, do którego nie ma uprawnień, zostaje automatycznie przekierowany na stronę główną, co zapewnia bezpieczeństwo i właściwą organizację dostępu do zasobów.
         </p>
+        <p>
+          Zaloguj się na każdego użytkownika i sprawdź do jakich zasobów posiada dostęp.
+        </p>
         <UserList />
     </div>
   );
