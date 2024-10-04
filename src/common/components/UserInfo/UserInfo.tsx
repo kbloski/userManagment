@@ -13,6 +13,7 @@ export function UserInfo(){
                     <div>Role: {UserRoles[Number(user?.role)]}</div>
                 </> : <div>Nie jesteś zalogowany</div>
             }
+            <button className={style.btn}>Edytuj</button>
         </div>
     </>
 }
