@@ -1,4 +1,5 @@
 :root {
+    --color-dark: black;
     --color-light: green;
     --color-contrast: rgb(123, 255, 0);
     --background: white;
@@ -12,7 +13,6 @@ body {
     overflow-x: hidden;
     padding: 0;
     width: 100vw;
-    font-family: Helvetica, sans-serif;
 }
 
 body > * {
