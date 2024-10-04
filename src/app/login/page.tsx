@@ -3,7 +3,7 @@ import { UserType } from '@/common/types/UserType';
 import style from './login.module.css';
 import { ChangeEvent, useState } from "react";
 import { error } from 'console';
-import { USER_KEY_LOCALSTORAGE } from '@/common/config';
+import { USER_KEY_LOCALSTORAGE } from '@/common/config/config';
 
 
 export default function LoginPage() {
@@ -28,26 +28,26 @@ export default function LoginPage() {
             {
                 method: 'POST',
                 headers: {
-                    'Content-Type' : 'application/json'
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify( user ),
+                body: JSON.stringify(user),
             }
-        ).then( 
+        ).then(
             response => {
-                if (!response.ok) throw new Error( String(response.status) )
-                    return response.json()
+                if (!response.ok) throw new Error(String(response.status))
+                return response.json()
             }
         )
-        .then( data => {
-            setMessage(undefined);
-            const dataJson = JSON.stringify(data.user)
-            localStorage.setItem( USER_KEY_LOCALSTORAGE, dataJson)
-            window.location.href = '/dashboard'
-        })
-        .catch( err => { 
-            if (err.message == '404') setMessage('Ten użtkownik nie istnieje');
-            if (err.message == '400') setMessage('Błędne dane logowania');
-        } )
+            .then(data => {
+                setMessage(undefined);
+                const dataJson = JSON.stringify(data.user)
+                localStorage.setItem(USER_KEY_LOCALSTORAGE, dataJson)
+                window.location.href = '/dashboard'
+            })
+            .catch(err => {
+                if (err.message == '404') setMessage('Ten użtkownik nie istnieje');
+                if (err.message == '400') setMessage('Błędne dane logowania');
+            })
     }
 
     return (
@@ -58,17 +58,17 @@ export default function LoginPage() {
             </div>
             <form className={style.form} onSubmit={submitAction}>
                 <div className={style['form-icon']}></div>
-                { message && <>
+                {message && <>
                     <p className={style.callback}>
                         {message}
                     </p>
                 </>}
                 <div className={style['input-container']}>
-                    <input type="text" id="username" name='username' placeholder=" " className={style['form-input']}  onChange={handlerChange}/>
+                    <input type="text" id="username" name='username' placeholder=" " className={style['form-input']} onChange={handlerChange} />
                     <label htmlFor="username" className={style['form-label']}>Username</label>
                 </div>
                 <div className={style['input-container']}>
-                    <input type="password" id="password" name='password' placeholder=" " className={style['form-input']}onChange={handlerChange} />
+                    <input type="password" id="password" name='password' placeholder=" " className={style['form-input']} onChange={handlerChange} />
                     <label htmlFor="password" className={style['form-label']}>Password</label>
                 </div>
                 <div className={style['form-spacer']}></div>

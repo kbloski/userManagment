@@ -3,3 +3,18 @@
     padding: 20px;
     background-color: white;
 }
+
+.technologies {
+    list-style: none;
+    display: flex;
+}
+
+.technologies > li {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.438);
+    background-color: rgba(253, 188, 25, 0.658);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}

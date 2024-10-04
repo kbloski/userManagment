@@ -3,8 +3,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { isResourceAllowedForRole } from "@/common/utils/accessbility/rolePermission";
-import { usePathname  } from "next/navigation";
-import { USER_KEY_LOCALSTORAGE } from "@/common/config";
+import { usePathname } from "next/navigation";
+import { USER_KEY_LOCALSTORAGE } from "@/common/config/config";
 import { Header } from "@/common/components/Header/Header";
 import { Footer } from "@/common/components/Footer/Footer";
 
@@ -31,9 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className='container'>
-          { pathName !== '/login' && <Header /> }
+          {pathName !== '/login' && <Header />}
           {children}
-          { pathName !== '/login' && <Footer /> }
+          {pathName !== '/login' && <Footer />}
         </div>
       </body>
     </html>
