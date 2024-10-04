@@ -1,5 +1,3 @@
-import { UserRoles } from "@/common/types/UserType";
-import { userList } from "./api/user/userList";
 import style from "./page.module.css";
 import { UserList } from "@/common/components/UserList/UserList";
 export default function Home() {

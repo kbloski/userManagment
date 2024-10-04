@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { userList } from "./userList";
-import { UserType } from "@/common/types/UserType";
 
 function findUserByUsername( username : string){
     if (!username) return false;

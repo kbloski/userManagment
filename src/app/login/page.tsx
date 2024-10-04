@@ -1,8 +1,6 @@
 'use client';
-import { UserType } from '@/common/types/UserType';
 import style from './login.module.css';
 import { ChangeEvent, useState } from "react";
-import { error } from 'console';
 import { USER_KEY_LOCALSTORAGE } from '@/common/config/config';
 
 
