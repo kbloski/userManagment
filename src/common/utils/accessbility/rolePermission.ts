@@ -38,3 +38,21 @@ export function isResourceAllowedForRole(
     window.location.href = '/'
     return false;
 }
+
+
+export function isAllowedByPriorityForRole( 
+    minRoleAccess: UserRoles, 
+    userRole?: UserRoles
+){
+    console.log( userRole)
+    if (isNaN( Number(userRole)) ) return false;
+    
+    const userPermission = accessPermission.find( permission => permission.role === userRole);
+    const minAccessPermission = accessPermission.find( permission => permission.role === minRoleAccess);
+
+    if (!userPermission || !minAccessPermission) return false;
+
+    console.log( userPermission.priority <= minAccessPermission.priority )
+    if( userPermission.priority <= minAccessPermission.priority) return true;
+    return false;
+}
