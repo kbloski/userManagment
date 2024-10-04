@@ -15,7 +15,7 @@ const accessPermission : accessPermissionType[] = [
     {
         role: UserRoles.MANAGER,
         priority: 2,
-        allowsResources: []
+        allowsResources: ['/manager']
     },
     {
         role: UserRoles.SUPPORT,

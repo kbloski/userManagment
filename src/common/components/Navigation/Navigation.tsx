@@ -43,6 +43,14 @@ export function Navigation() {
                         </li>
                     </>}
 
+                    {isAllowedByPriorityForRole(
+                        UserRoles.MANAGER, 
+                        logged.user?.role
+                    ) && <>
+                        <li>
+                            <Link href={'/manager'}>Manager</Link>
+                        </li>
+                    </>}
 
 
                     <li>

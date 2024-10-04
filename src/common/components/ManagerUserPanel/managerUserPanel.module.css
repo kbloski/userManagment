@@ -1,0 +1,48 @@
+.section-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    box-shadow: 0 0 8px black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container > h2 {
+    margin: 0;
+    padding: 10px;
+    border-bottom: solid 2px black;
+}
+
+.table {
+    padding-top: 20px;
+    padding: 10px;
+}
+
+
+.table td, .table th {
+    padding: 10px;
+}
+.table th {
+    background-color: rgb(0, 187, 140);
+}
+
+.table td {
+    background-color: rgb(224, 224, 224);
+}
+
+.btn {
+    margin-left: 5px;
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: gray;
+}
+
