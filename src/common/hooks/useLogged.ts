@@ -7,10 +7,10 @@ export function useLogged() {
     const [user, setUser] = useState<UserType | undefined>(undefined);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(refresh, 100);
-        return () => clearInterval(interval)
-    }, [user])
+useEffect(() => {
+    const interval = setInterval(refresh, 100);
+    return () => clearInterval(interval)
+}, [user])
 
     function refresh() {
         if (user && !isLoggedIn) setIsLoggedIn(true);

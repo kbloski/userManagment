@@ -6,7 +6,7 @@ export function ManagerUserPanel() {
     const users = userList;
     return <section className={style['section-panel']}>
         <div className={style.container}>
-            <h2>Lista dostępnych użytkowników</h2>
+            <h2>Użytkownicy</h2>
             <table className={style.table}>
                 <tbody>
                     <tr>

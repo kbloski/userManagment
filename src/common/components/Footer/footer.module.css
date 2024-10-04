@@ -1,6 +1,20 @@
 .footer{
-    padding: 10px;
+    padding: 20px;
     background-color: #f0f0f0;
     width: 100%;
     border-radius: 0 0 10px 10px;
+    display: flex;   
+}
+
+.footer div {
+    margin-left: 10px;
+    padding: 0 10px;
+    border-left: 2px solid rgb(7, 209, 0);
+    font-weight: bold;
+}
+
+.footer div:hover {
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+    cursor: pointer;
 }

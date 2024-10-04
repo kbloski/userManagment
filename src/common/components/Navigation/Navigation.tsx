@@ -35,23 +35,31 @@ export function Navigation() {
                     </li>
 
                     {isAllowedByPriorityForRole(
-                        UserRoles.SUPPORT, 
+                        UserRoles.SUPPORT,
                         logged.user?.role
                     ) && <>
-                        <li>
-                            <Link href={'/support'}>Support</Link>
-                        </li>
-                    </>}
+                            <li>
+                                <Link href={'/support'}>Support</Link>
+                            </li>
+                        </>}
 
                     {isAllowedByPriorityForRole(
-                        UserRoles.MANAGER, 
+                        UserRoles.MANAGER,
                         logged.user?.role
                     ) && <>
-                        <li>
-                            <Link href={'/manager'}>Manager</Link>
-                        </li>
-                    </>}
+                            <li>
+                                <Link href={'/manager'}>Manager</Link>
+                            </li>
+                        </>}
 
+                    {isAllowedByPriorityForRole(
+                        UserRoles.ADMIN,
+                        logged.user?.role
+                    ) && <>
+                            <li>
+                                <Link href={'/admin'}>Admin</Link>
+                            </li>
+                        </>}
 
                     <li>
                         <Link href='/' onClick={onLogOut}>Logout</Link>

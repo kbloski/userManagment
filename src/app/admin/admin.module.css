@@ -1,0 +1,10 @@
+.container {
+    margin: 0 ;
+    padding: 20px;
+    background: var(--background);
+}
+
+.container > h1 {
+    border-bottom: 2px solid black;
+    
+}
