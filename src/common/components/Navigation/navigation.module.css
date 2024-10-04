@@ -11,7 +11,7 @@
     padding: 10px;
 }
 
-.li {
+.ul li {
     background: radial-gradient( rgba(127, 255, 95, 0.699), var(--color-contrast));
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgba(0,0,0,0.3);
@@ -19,18 +19,17 @@
     padding: 5px 15px;
 }
 
-.li:hover {
+.ul li:hover {
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-.li > a {
+.ul li > a {
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.liLogOut {
-    background: radial-gradient( rgba(255, 123, 123, 0.774), red );
-}
+
 .liLogOut > a{
     color: White;
 }

@@ -44,7 +44,6 @@ export function isAllowedByPriorityForRole(
     minRoleAccess: UserRoles, 
     userRole?: UserRoles
 ){
-    console.log( userRole)
     if (isNaN( Number(userRole)) ) return false;
     
     const userPermission = accessPermission.find( permission => permission.role === userRole);
@@ -52,7 +51,6 @@ export function isAllowedByPriorityForRole(
 
     if (!userPermission || !minAccessPermission) return false;
 
-    console.log( userPermission.priority <= minAccessPermission.priority )
     if( userPermission.priority <= minAccessPermission.priority) return true;
     return false;
 }
